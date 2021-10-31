@@ -1,3 +1,4 @@
+  
 # Prerequisites
 *.d
 
@@ -30,3 +31,9 @@
 *.exe
 *.out
 *.app
+
+.idea/
+/cmake-build-debug
+/sample
+*.DS_Store
+/lib
