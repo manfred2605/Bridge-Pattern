@@ -3,34 +3,34 @@
 //
 #ifndef BRIDGE_PATTERN_GENERALMANAGER_H
 #define BRIDGE_PATTERN_GENERALMANAGER_H
+#include"Patient.h"
 #include <vector>
 #include <cassert>
 #include <iostream>
 #include <sstream>
-#include"Patient.h"
 using namespace std;
 
-template<typename G>
+template<typename T>
 Class GeneralManager{
 private:
     Gen element{};
-    vector<G>elementList;
+    vector<T>elementList;
 public:
     //generic methods
-    void setElement(G const&);
-    void addElement(G const&);
+    void setElement(T const&);
+    void addElement(T const&);
 
-    G getElement()const;
-    vector<G> getElementList()const;
+    T getElement()const;
+    vector<T> getElementList()const;
 
     string toString();
 };
 
+template<typename T>
+void GeneralManager::setElement(const T& elem){GeneralManager<T>::element = elem;}
 
-
-
-
-
+template<typename T>
+T GeneralManager<T>::getElement(){ return element; }
 
 
 #endif //BRIDGE_PATTERN_GENERALMANAGER_H
