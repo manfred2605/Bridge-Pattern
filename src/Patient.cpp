@@ -9,8 +9,13 @@ Patient::Patient(int ced,std::string nom,std::string cel,std::string cor,std::st
 :Person(ced,std::move(nom),std::move(cel),std::move(cor)),ADN(std::move(cadena)){}
 Patient::~Patient() = default;
 
+
 void Patient::setADN(std::string cade){Patient::ADN = std::move(cade); }
 std::string Patient::getADN() const { return Patient::ADN; }
+
+
+void Patient::setTemperature(int temp) { Patient::temperature = temp; }
+int Patient::getTemperature() const { return Patient::temperature; }
 
 std::string Patient::toString() {
     std::stringstream output;
@@ -18,6 +23,10 @@ std::string Patient::toString() {
     output<<Person::toString();
     output<<"ADN"<<ADN;
     return output.str();
+}
+
+void Patient::takeMedicine() {
+    medicine->showMedicine(Patient::getTemperature());
 }
 
 

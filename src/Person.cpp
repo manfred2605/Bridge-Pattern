@@ -4,10 +4,15 @@
 #include "Person.h"
 #include <utility>
 
-Person::Person()= default;
+Person::Person(){}
+
 Person::Person(int id, std::string  nombre,  std::string celular, std::string correo)
 :documentId(id),name(std::move(nombre)),cellphone(std::move(celular)),mail(std::move(correo)){}
-Person::~Person() = default;
+
+ Person::~Person() = default;
+
+//Bidge Pattern
+Person::Person(IMedicine* medicine1):medicine(medicine1){}
 
 void Person::setDocumentId(int cedula) { Person::documentId = cedula; }
 void Person::setName(std::string nombre) {Person::name = std::move(nombre);}
@@ -29,5 +34,3 @@ std::stringstream output;
     output<<"Mail"<<mail;
     return output.str();
 }
-
-

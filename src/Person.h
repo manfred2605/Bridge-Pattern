@@ -5,21 +5,29 @@
 #define BRIDGE_PATTERN_PERSON_H
 #include<iostream>
 #include<sstream>
+#include"IMedicine.h"
 
-class Person {
+class Person:public IMedicine {
+
 private:
     int documentId{};
     std::string name;
     std::string cellphone;
     std::string mail;
-public:
 
+protected:
+    //Bridge Pattern
+    IMedicine* medicine;
+
+public:
     // Constructors
     Person();
-    Person(int,std::string ,std::string,std::string);
+    Person(int, std::string ,std::string, std::string);
+    Person(IMedicine*);
+
     virtual ~Person();
 
-    // Gets and Sets
+    //Gets and Sets
     void setDocumentId(int);
     void setName(std::string);
     void setCellPhone(std::string);

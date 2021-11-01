@@ -7,14 +7,19 @@
 class Patient:public Person {
 private:
     std::string ADN;
+    int temperature;
 public:
     Patient();
     Patient(int,std::string,std::string,std::string,std::string);
     ~Patient() override;
 
     void setADN(std::string);
-    std::string getADN()const;
+    void setTemperature(int);
 
+    std::string getADN()const;
+    int getTemperature()const;
+
+    void takeMedicine()override;
     std::string toString()override;
 };
 
