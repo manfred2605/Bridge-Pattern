@@ -5,10 +5,10 @@
 #define BRIDGE_PATTERN_IMEDICINE_H
 #include <sstream>
 
-class IMedicine {
+class Itaxes{
 
 public:
-    virtual std::string showMedicine(int) = 0;
+    virtual std::string showTaxes(int) = 0;
 };
 
 #endif //BRIDGE_PATTERN_IMEDICINE_H
