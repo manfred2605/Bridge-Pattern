@@ -5,18 +5,21 @@
 #define BRIDGE_PATTERN_PERSON_H
 #include<iostream>
 #include<sstream>
-#include"Itaxes.h"
+#include "Itaxes.h"
+class Itaxes;
 
-class Person {
+class Person{
 
 private:
     std::string name;
     int salary;
+protected:
+    Itaxes* tax;
 
 public:
     // Constructors
     Person();
-    Person(std::string,int);
+    Person(std::string,int,Itaxes*);
 
     virtual ~Person();
 
@@ -27,6 +30,7 @@ public:
     void setSalary(int);
     int getSalary() const;
 
+    virtual void payTaxes() = 0;
     virtual std::string toString();
 
 };

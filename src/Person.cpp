@@ -7,8 +7,8 @@
 Person::Person(){}
 Person::~Person() = default;
 
-Person::Person(std::string nom, int sal)
-:name(std::move(nom)),salary(sal){}
+Person::Person(std::string nom, int sal, Itaxes* tax)
+:name(std::move(nom)),salary(sal),tax(tax){}
 
 //Bidge Pattern
 
