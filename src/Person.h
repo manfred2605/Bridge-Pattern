@@ -30,6 +30,7 @@ public:
     std::string getCellPhone()const;
     std::string getMail()const;
 
+    virtual void takeMedicine() = 0;
     virtual std::string toString();
 
 };
