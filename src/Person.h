@@ -7,19 +7,18 @@
 #include<sstream>
 #include "Itaxes.h"
 class Itaxes;
-
 class Person{
-
 private:
     std::string name;
-    int salary;
+    int salary{};
 protected:
     Itaxes* tax;
 
 public:
     // Constructors
     Person();
-    Person(std::string,int,Itaxes*);
+    Person(std::string,int);
+    explicit Person(Itaxes*);
 
     virtual ~Person();
 
@@ -30,7 +29,8 @@ public:
     void setSalary(int);
     int getSalary() const;
 
-    virtual void payTaxes() = 0;
+    virtual std::string payTaxes();
+
     virtual std::string toString();
 
 };
