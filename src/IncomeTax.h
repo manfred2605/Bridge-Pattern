@@ -11,7 +11,6 @@ class IncomeTax:public Itaxes {
 public:
     ~IncomeTax();
     std::string showTaxes(int)override;
-
 };
 
 

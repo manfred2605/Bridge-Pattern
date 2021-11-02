@@ -3,17 +3,12 @@
 //
 
 #include "IngJunior.h"
-
 #include <utility>
 
-IngJunior::IngJunior(std::string nom, int sal) : Person(std::move(nom),sal)
+IngJunior::IngJunior(int sal,Itaxes& taxi) : Person(sal,taxi)
 {}
 
 std::string IngJunior::payTaxes(){
     tax->showTaxes(IngJunior::getSalary());
         return "tax: ";
-}
-
-std::string IngJunior::toString() {
-    return Person::toString();
 }

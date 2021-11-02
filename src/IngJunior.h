@@ -8,10 +8,9 @@
 class IngJunior:public Person{
 
 public:
-IngJunior(std::string,int);
+    IngJunior(int,Itaxes&);
+    std::string payTaxes()override;
 
-std::string payTaxes()override;
-std::string toString()override;
 };
 
 
