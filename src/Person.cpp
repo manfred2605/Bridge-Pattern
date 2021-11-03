@@ -7,8 +7,8 @@
 Person::Person(){}
 Person::~Person() = default;
 
-Person::Person(int sal,Itaxes& taxi)
-:salary(sal){*tax = taxi;}
+Person::Person(int sal,Itaxes* taxi)
+:salary(sal){tax = taxi;}
 
 void Person::setSalary(int sal) {Person::salary = sal;}
 int Person::getSalary() const { return Person::salary; }

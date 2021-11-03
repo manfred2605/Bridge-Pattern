@@ -8,10 +8,8 @@
 class IngJunior:public Person{
 
 public:
-    IngJunior(int,Itaxes&);
+    IngJunior(int,Itaxes*);
     std::string payTaxes()override;
 
 };
-
-
 #endif //BRIDGE_PATTERN_INGJUNIOR_H

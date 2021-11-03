@@ -7,14 +7,15 @@
 #include<sstream>
 #include "Itaxes.h"
 class Itaxes;
+
 class Person{
 private:
     int salary{};
 protected:
-    Itaxes* tax{};
+    Itaxes* tax;
 public:
     Person();
-    Person(int,Itaxes&);
+    Person(int,Itaxes*);
 
     virtual ~Person();
 

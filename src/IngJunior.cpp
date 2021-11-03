@@ -5,10 +5,9 @@
 #include "IngJunior.h"
 #include <utility>
 
-IngJunior::IngJunior(int sal,Itaxes& taxi) : Person(sal,taxi)
+IngJunior::IngJunior(int sal,Itaxes* taxi) : Person(sal,taxi)
 {}
 
 std::string IngJunior::payTaxes(){
-    tax->showTaxes(IngJunior::getSalary());
-        return "tax: ";
+    return tax->showTaxes(IngJunior::getSalary());
 }
