@@ -8,7 +8,7 @@ IncomeTax::~IncomeTax() {}
 
 std::string IncomeTax::showTaxes(int value) {
     if(value > 500000){
-        return "15% tax";
+        return "must pay 15% tax \n";
     }
     return "Does not pay the tax";
 }

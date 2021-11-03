@@ -8,5 +8,5 @@
 TEST(IngJuniorTestSuite, CheckData){
     auto* tax = new IncomeTax();
     auto* ing = new IngJunior(650000,tax);
-    EXPECT_EQ(ing->payTaxes(),"15% tax");
+    EXPECT_EQ(ing->payTaxes(),"must pay 15% tax \n");
 }

@@ -23,6 +23,9 @@ public:
     void setSalary(int);
     int getSalary() const;
 
+    void setItaxes(Itaxes*);
+    Itaxes* getItaxes()const;
+
     virtual std::string payTaxes() = 0;
 };
 #endif //BRIDGE_PATTERN_PERSON_H

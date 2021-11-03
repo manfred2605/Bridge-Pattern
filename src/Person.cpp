@@ -13,6 +13,9 @@ Person::Person(int sal,Itaxes* taxi)
 void Person::setSalary(int sal) {Person::salary = sal;}
 int Person::getSalary() const { return Person::salary; }
 
+void Person::setItaxes(Itaxes* taxi) {tax = taxi; }
+Itaxes *Person::getItaxes() const { return tax; }
+
 
 
 
