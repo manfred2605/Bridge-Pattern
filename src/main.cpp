@@ -13,18 +13,5 @@ int main() {
     auto* ing = new IngJunior(650000,tax);
     std::cout<<ing->payTaxes();
 
-    auto* taxi = new CCSSTax();
-    ing->setItaxes(taxi);
-    std::cout<<ing->payTaxes();
-
-
-
-
-
-
-
-
-
-
     return 0;
 }
