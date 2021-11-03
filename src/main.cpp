@@ -4,7 +4,7 @@
 #include <iostream>
 #include "IngJunior.h"
 #include "IncomeTax.h"
-#include "CCSSTax.h"
+//#include "CCSSTax.h"
 
 int main() {
     std::cout << "Hello, Universidad Nacional!" << std::endl;
