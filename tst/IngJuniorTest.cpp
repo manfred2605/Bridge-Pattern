@@ -12,10 +12,12 @@ TEST(IngJuniorTestSuite, CheckData){
     EXPECT_EQ(ing->payTaxes(),"must pay 15% tax \n");
     std::cout<<ing->payTaxes();
 }
-
+/*
 TEST(IngJuniorTestSuite, CheckDataCCSS){
     auto* taxi = new CCSSTax();
     auto* ing = new IngJunior(650000,taxi);
     EXPECT_EQ(ing->payTaxes(),"must pay 10% of your salary: 65000\n");
     std::cout<<ing->payTaxes();
 }
+
+ */
