@@ -24,6 +24,5 @@ public:
     int getSalary() const;
 
     virtual std::string payTaxes() = 0;
-
 };
 #endif //BRIDGE_PATTERN_PERSON_H
