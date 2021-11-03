@@ -10,8 +10,6 @@ int main() {
 
     auto* tax = new IncomeTax();
     auto* ing = new IngJunior(650000,tax);
-
     std::cout<<ing->payTaxes();
-
     return 0;
 }
