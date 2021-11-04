@@ -4,9 +4,9 @@
 #include <iostream>
 #include "IngJunior.h"
 #include "IncomeTax.h"
-#include "IngSenior.h"
-
+//#include "IngSenior.h"
 //#include "CCSSTax.h"
+
 
 int main() {
     std::cout << "Hello, Universidad Nacional!" << std::endl;
@@ -17,10 +17,13 @@ int main() {
     std::cout<<std::endl;
 
     /*
+
     auto* sen = new IngSenior(1300000,tax);
     std::cout<<sen->payTaxes();
-*/
+    sen->setItaxes(taxi);
+    std::cout<<sen->payTaxes();
 
+     */
 
 
     return 0;
