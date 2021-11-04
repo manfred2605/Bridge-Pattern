@@ -9,9 +9,9 @@
 TEST(IngJuniorTestSuite, CheckData){
 
     auto* tax = new IncomeTax();
-    auto* ing = new IngJunior(650000,tax);
+    auto* ing = new IngJunior(350000,tax);
 
-    EXPECT_EQ(ing->payTaxes(),"must pay 15% tax \n");
+    EXPECT_EQ(ing->payTaxes(),"Does not pay the tax \n");
     std::cout<<ing->payTaxes();
 }
 /*
